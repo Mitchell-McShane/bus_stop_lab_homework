@@ -1,6 +1,6 @@
 class Bus:
     def __init__(self, route_number, destination,):
-        self.route_number = 22
+        self.route_number = route_number
         self.destination = destination
         self.passengers = []
 
@@ -19,4 +19,7 @@ class Bus:
     def empty(self):
         self.passengers = []
 
+    def pick_up_from_stop(self, bus_stop):
+        for passenger in bus_stop.queue:
+            self.pick_up(passenger)
         
